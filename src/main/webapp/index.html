@@ -45,22 +45,23 @@
 
         <div class="clearfix">
             <ul class="azen-Newest fl">
-                <li><a class="Recommend" href="#" id="_default">推荐</a></li>
-                <li><a href="#" id="_new">最新</a></li>
-                <li><a href="#" id="hot">热门</a></li>
-                <li><a href="#">源文件</a></li>
+                <li><a class="Recommend" href="javascript:void(0);" id="_default">推荐</a></li>
+                <li><a href="javascript:void(0);" id="_new">最新</a></li>
+                <li><a href="javascript:void(0);" id="hot">热门</a></li>
+                <li><a href="javascript:void(0);">源文件</a></li>
             </ul>
             <div class="notice fl">
                 <ul id="jsfoot01" class="noticTipTxt">
                     <li><a href="">网站正式上线。 <img src="/img/icon/hot.gif" width="22"
-                                                           height="11"/></a></li>
+                                                height="11"/></a></li>
                     <li><a href="#">网站将于进行系统升级。</a></li>
                     <li><a href="#">网站将于进行系统升级。</a></li>
                     <li><a href="#">网站将于进行系统升级。</a></li>
                 </ul>
             </div>
             <div class="azen-button fr">
-                <input class="azen-button" type="file" accept="image/gif,image/jpeg,image/jpg,image/png" id="shang"><label for="shang"><i
+                <input class="azen-button" type="file" accept="image/gif,image/jpeg,image/jpg,image/png"
+                       id="shang"><label for="shang"><i
                     class="fa fa-upload">上传作品</i></label>
             </div>               <!-- json:accept=".json"  视频:accept="audio" or accept="video"-->
         </div>
@@ -131,9 +132,12 @@
     });
     $("#_new").click(function () {
         extracted(null, null, 3);
+        window.scrollTo(0, 400); // x, y 坐标
     });
     $("#hot").click(function () {
         extracted(null, null, 4);
+        window.scrollTo(0, 400); // x, y 坐标
+
     });
     $("#search-button").click(function () {
         var pname = $("#search-input").val();
@@ -320,8 +324,8 @@
             }
             $("#portfolio").html(por_lis);
             //每次请求对应页面后,重新请求,页面滚动到顶部
-            window.scrollTo(0, 400); // x, y 坐标
         });
+       // window.scrollTo(0, 400); // x, y 坐标
     }
 </script>
 <script type="text/javascript">
