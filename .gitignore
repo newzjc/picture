@@ -28,9 +28,11 @@ hs_err_pid*
 .classpath
 .project
 .settings
+.gitignore
 .idea
 *.iws
 *.ipr
 *.iml
+
 
 /out/
