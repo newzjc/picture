@@ -1,7 +1,6 @@
 package dao.Impl;
 
 import dao.PortfolioDao;
-import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import pogo.Portfolio;
