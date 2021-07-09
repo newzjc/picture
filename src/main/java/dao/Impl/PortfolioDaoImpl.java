@@ -46,7 +46,7 @@ public class PortfolioDaoImpl implements PortfolioDao {
 
     @Override
     public List<Portfolio> new_portfolio(int start, int row, String pname) {
-        List<Portfolio> list = null;
+       // List<Portfolio> list = null;
         //String sql = "select * from tab_portfolio limit ? , ? ";
         String sql = "select * from tab_portfolio where 1 = 1";
         StringBuilder ssql = new StringBuilder(sql);
