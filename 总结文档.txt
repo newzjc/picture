@@ -1,0 +1,51 @@
+该文档是此个人项目各模块的概述及总结
+
+前端：
+是去网上找的纯静态html页面 ，页面之间切换不可数据交互，没有js代码，
+
+后端：
+前台代码是结合原本html页面，使用jquery和ajax与后台实现数据交互， 
+后台代码是通过JDBCJdbcTemplate与Mysql数据库进行连接，
+后台代码整体结构是MVC三层架构，web服务层，service业务逻辑层，dao数据层，
+
+web服务层
+	filter：
+	CharChaterFilter : 过滤器 防止数据乱码	
+	servlet: 
+	使用 BeanServlet 继承HttpServlet, 重写Servlet的service方法,分发this对应的方法  （servlet包下的其他类都继承BeanServlet类）
+	 使用注解，在前台ajax中使用以下类的注解完成对应的操作
+	CheckCodeServlet : 提供验证码的服务      
+	NavigationServlet : 提供前台导航栏的服务   
+	PortfolioServlet  : 提供前台数据分页的服务  
+	UserServlet  :  提供用户注册，登录，退出登录的服务    
+
+service层 
+	创建每一个服务对应的接口，在接口中写关于此服务的方法
+	impl包中实现所有接口，在对应的impl类中重写每一种服务的所需的逻辑代码
+
+dao层 
+	创建每一个服务对应的接口，在接口中写关于此服务的方法
+	impl包中实现所有接口，在对应的impl类中重写每一种服务所需要数据的SQL代码  
+	
+
+ 该项目运用到的技术包含： html, css, bootstrap, jquery, ajax, javaweb, tomcat, mysql, javase, JDBC, maven
+
+至此该项目实现了：
+
+注册：可判断用户名在数据库是否已存在，可发送邮件（目前关闭）
+登录：包含退出登录（清除Cookice）
+导航条：使用Redis缓存型数据库展示不经常变换的数据，并保存到内存中
+作评展示：包含作品名称，作品作者，作品观看数，作品收藏数，
+分页条： 每页显示4条数据，可翻页，首页，末页
+根据作品的属性来排序，可按时间浏览最新作品，按观看数浏览热门作品  ，也可以翻页浏览
+搜索框： 通过输入的关键字字符信息去数据库查找到相关的数据，返回的数据是带有输入字符相关的作品信息， 也可以翻页浏览
+
+总结：项目总体来说很粗糙，技术运用也不是完全熟练，但人总是在进步的。
+
+	
+	
+	
+	
+
+
+
