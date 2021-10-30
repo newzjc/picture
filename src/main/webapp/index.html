@@ -43,7 +43,7 @@
 
         <div class="clearfix">
             <ul class="azen-Newest fl">
-                <li><a href="javascript:void(0);" id="_default">推荐</a></li>
+               <!-- <li><a href="javascript:void(0);" id="_default">推荐</a></li>-->
                 <li><a href="javascript:void(0);" id="_new">最新</a></li>
                 <li><a href="javascript:void(0);" id="hot">热门</a></li>
                 <li><a href="javascript:void(0);">源文件</a></li>
@@ -307,12 +307,12 @@
             for (var j = 0; j < pb.list.length; j++) {
                 var list = pb.list[j];
                 var por_li = '<li>\n' +
-                    '                <div><a href="bird.html" target="_blank"><img src="' + list.img + '" width="235" height="188" title="" alt=""></a></div>\n' +
+                    '                <div><a href="'+list.pid+'.html" target="_blank"><img src="' + list.img + '" width="235" height="188" title="" alt=""></a></div>\n' +
                     '                <div>\n' +
                     '                    <ul class="azen-viewit list-viewit">\n' +
-                    '                        <li class="viewit"><a href="index.html">' + list.view + '</a></li>\n' +
-                    '                        <li class="likeit"><a href="index.html">' + list.like + '</a></li>\n' +
-                    '                        <li class="luatio"><a href="index.html">' + list.comment + '</a></li>\n' +
+                    '                        <li class="viewit">' + list.view + '</li>\n' +
+                    '                        <li class="likeit">' + list.like + '</li>\n' +
+                    '                        <li class="luatio">' + list.comment + '</li>\n' +
                     '                    </ul>\n' +
                     '                    <div class="azen-paddin"><a href="organization.html">' + list.organization + '</a> <a href="picture.html">《' + list.pname + '》</a> <a\n' +
                     '                            href="author.html#">' + list.author + '</a></div>\n' +
