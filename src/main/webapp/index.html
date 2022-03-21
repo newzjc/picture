@@ -310,9 +310,8 @@
                 var list = pb.list[j];
 
                 var por_li = '<li>\n' +  //target="_blanks  ：实现点击a标签重新打开一个网页
-                    '                <div><a href="game/' + list.pid + '.html"  onclick="return fun1(' + list.pid + ')" target="_blanks"><img src="' + list.img + '" width="235" height="200" title="" alt=""></a></div>\n' +
+                    '                <div><a onclick="return fun1(' + list.pid + ')"  href="game/' + list.pid + '.html"  target="_blanks"><img src="' + list.img + '" width="235" height="200" title="" alt=""></a></div>\n' +
                     '                <div>\n' + '' +
-
                     '                    <ul class="azen-viewit list-viewit">\n' +
                     '                        <li class="viewit">' + list.view + '</li>\n' +
                     '                        <li class="likeit">' + list.like + '</li>\n' +
