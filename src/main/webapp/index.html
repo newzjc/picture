@@ -43,7 +43,7 @@
 
         <div class="clearfix">
             <ul class="azen-Newest fl">
-               <!-- <li><a href="javascript:void(0);" id="_default">推荐</a></li>-->
+                <!-- <li><a href="javascript:void(0);" id="_default">推荐</a></li>-->
                 <li><a href="javascript:void(0);" id="_new">最新</a></li>
                 <li><a href="javascript:void(0);" id="hot">热门</a></li>
                 <li><a href="javascript:void(0);">源文件</a></li>
@@ -146,6 +146,7 @@
         }
         return true;
     });
+
 
     function extracted(currentPage, pname, flag) {
         /* $.ajax({
@@ -304,11 +305,14 @@
             $("#totalCount").html(pb.totalCount);
 
             var por_lis = "";
+
             for (var j = 0; j < pb.list.length; j++) {
                 var list = pb.list[j];
-                var por_li = '<li>\n' +
-                    '                <div><a href="game/'+list.pid+'.html" target="_blank"><img src="' + list.img + '" width="235" height="200" title="" alt=""></a></div>\n' +
-                    '                <div>\n' +
+
+                var por_li = '<li>\n' +  //target="_blanks  ：实现点击a标签重新打开一个网页
+                    '                <div><a href="game/' + list.pid + '.html"  onclick="return fun1(' + list.pid + ')" target="_blanks"><img src="' + list.img + '" width="235" height="200" title="" alt=""></a></div>\n' +
+                    '                <div>\n' + '' +
+
                     '                    <ul class="azen-viewit list-viewit">\n' +
                     '                        <li class="viewit">' + list.view + '</li>\n' +
                     '                        <li class="likeit">' + list.like + '</li>\n' +
@@ -318,15 +322,33 @@
                     '                            href="author.html#">' + list.author + '</a></div>\n' +
                     '                </div>\n' +
                     '            </li>';
+
+
                 por_lis += por_li;
             }
             $("#portfolio").html(por_lis);
             //每次请求对应页面后,重新请求,页面滚动到顶部
         });
-       // window.scrollTo(0, 400); // x, y 坐标
+        // window.scrollTo(0, 400); // x, y 坐标
     }
 
+    function fun1(pid) {
+        if (pid == 16) {
+            $.get("user/name", {}, function (data) {
+                if (data == null) {
+                    alert("登陆后再尝试")
+                    return false;
+                } else {
+                    return true;
+                }
+            });
+        } else {
+            return true;
+        }
+
+    }
 </script>
+
 <script type="text/javascript">
     $(document).ready(function () {
 
