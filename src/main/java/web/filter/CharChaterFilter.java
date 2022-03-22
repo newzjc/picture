@@ -21,7 +21,7 @@ public class CharChaterFilter implements Filter {
         //获取方法
         String method = request.getMethod();
         //处理方法的乱码
-        if (method.equalsIgnoreCase("post")) {
+        if (method.equalsIgnoreCase("post")||method.equalsIgnoreCase("get")) {
             request.setCharacterEncoding("utf-8");
         }
         //处理响应乱码
@@ -33,5 +33,4 @@ public class CharChaterFilter implements Filter {
     public void init(FilterConfig config) throws ServletException {
 
     }
-
 }

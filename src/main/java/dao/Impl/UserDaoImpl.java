@@ -43,7 +43,7 @@ public class UserDaoImpl implements UserDao {
     }
 
     /**
-     * t通过username 和 password 查询用户
+     * 通过username 和 password 查询用户
      *
      * @param username
      * @param password
