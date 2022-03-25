@@ -21,7 +21,6 @@ public class UserServlet extends BaseServlet {
 
     /**
      * 注册功能
-     *
      * @param request
      * @param response
      * @throws ServletException
